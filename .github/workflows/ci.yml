@@ -15,7 +15,7 @@ jobs:
       - name: Install uv and Python
         uses: astral-sh/setup-uv@v10.3.3
         with:
-          python-version-file: ".python-version"
+          python-version-file: "3.13"
 
       - name: Install project
         run: uv sync --locked --dev
