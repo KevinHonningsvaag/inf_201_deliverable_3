@@ -52,5 +52,5 @@ class Character:
 
     @property
     def is_alive(self) -> bool:
-        """ "Returns if the character is alive or not"""
+        """Returns if the character is alive or not"""
         return self._hp > 0
