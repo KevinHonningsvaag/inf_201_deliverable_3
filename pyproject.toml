@@ -23,3 +23,25 @@ dev = [
     "pytest-cov>=7.1.0",
     "ruff>=0.17.3",
 ]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E4", "E7", "E9", # PEP8 rules
+    "F",               # undefined variables and imports
+    "I",               # sorting of imports
+    "B",               # bugs
+    "UP",              # python syntax
+    "SIM",             # simplifications
+    "RUF",             # Ruff-spesific rules
+]
+
+[tool.basedpyright]
+typeCheckingMode = "standard"
+include = ["src", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-config --strict-markers"
