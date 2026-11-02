@@ -4,3 +4,8 @@
 # in terminal:
 # uv sync
 # code .
+#
+# Checking code, run in terminal:
+# uv run ruff check --fix .
+# uv run basedpyright
+# uv run pytest
