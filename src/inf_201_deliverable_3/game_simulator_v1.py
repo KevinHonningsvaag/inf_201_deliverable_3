@@ -1,5 +1,7 @@
 # Object-oriented game simulator
-# Turid Torheim, NMBU, 2026
+# Turid Torheim, NMBU, 202i6
+
+from __future__ import annotations
 
 
 class Character:
@@ -19,7 +21,7 @@ class Character:
         self.hp_max = hp_max
         self.damage = damage
 
-    def attack(self, target) -> None:
+    def attack(self, target: Character) -> None:
         """Attack and deal damage to target character"""
         target.take_damage(self.damage)
 
