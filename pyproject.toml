@@ -39,7 +39,7 @@ select = [
 ]
 
 [tool.basedpyright]
-typeCheckingMode = "standard"
+typeCheckingMode = "strict"
 include = ["src", "tests"]
 
 [tool.pytest.ini_options]
