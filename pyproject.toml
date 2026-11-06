@@ -1,5 +1,5 @@
 [project]
-name = "inf_201_deliverable_2"
+name = "inf_201_deliverable_3"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -10,7 +10,7 @@ requires-python = ">=3.13"
 dependencies = []
 
 [project.scripts]
-project = "inf_201_deliverable_2.main:main"
+project = "game:main"
 
 [build-system]
 requires = ["uv_build>=0.13.6,<0.14.0"]
@@ -47,4 +47,4 @@ testpaths = ["tests"]
 addopts = "-ra --strict-config --strict-markers"
 
 [tool.uv.build-backend]
-module-name = "inf_201_deliverable_3"
+module-name = "game"

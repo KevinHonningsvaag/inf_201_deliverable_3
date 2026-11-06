@@ -4,13 +4,20 @@
 
 from __future__ import annotations
 
-import random
+from game.dice import Dice
+from game.items import Weapons
 
 
 class Character:
     """Represents a character in the RPG"""
 
-    def __init__(self, name: str, hp_max: int = 100, damage: int = 10) -> None:
+    def __init__(
+        self,
+        name: str,
+        weapon: Weapons | None = None,
+        hp_max: int = 100,
+        base_damage: int = 10,
+    ) -> None:
         """
         Initialise the Character
 
@@ -22,15 +29,17 @@ class Character:
         self.name = name
         self._hp = hp_max  # Note: _hp indicated private attribute
         self.hp_max = hp_max
-        self.damage = damage
+        if weapon is None:
+            self.damage = base_damage
+        else:
+            self.damage = weapon.damage
 
     def attack(self, target: Character) -> None:
         """Attack and deal damage to target character"""
         target.take_damage(self.damage)
 
     def take_damage(self, damage: int) -> None:
-        """Character takes damage"""
-        self._hp -= damage
+        self._hp -= Dice(damage).roll()
         self._hp = max(self._hp, 0)  # Target hp cannot end up lower than 0
 
     def heal(self, heal: int) -> None:
@@ -59,28 +68,3 @@ class Character:
     def is_alive(self) -> bool:
         """Returns if the character is alive or not"""
         return self._hp > 0
-
-
-class Dice:
-    def __init__(self, sides: int = 6) -> None:
-        """
-        Initialise the dice
-
-        Args:
-            sides (int) : how many sides does the dice have
-        """
-        if sides < 2:
-            raise ValueError("Dice must have atleast 2 sides")
-        self.sides = sides
-
-    def roll(self) -> int:
-        """Rolls the dice and makes it land on a random side"""
-        return random.randint(1, self.sides)
-
-    def __repr__(self) -> str:
-        """Representation of dice object"""
-        return f"Dice(sides = {self.sides})"
-
-    def __call__(self) -> int:
-        """Make the diceroll happen"""
-        return self.roll()

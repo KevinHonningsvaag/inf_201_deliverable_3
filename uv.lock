@@ -120,7 +120,7 @@ wheels = [
 ]
 
 [[package]]
-name = "inf-201-deliverable-2"
+name = "inf-201-deliverable-3"
 version = "0.1.0"
 source = { editable = "." }
 
