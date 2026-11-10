@@ -1,6 +1,5 @@
 from game.character import Character, Mage
 
-
 def test_mage_initialization() -> None:
     """Test that a mage is initialized correctly."""
 
@@ -31,7 +30,7 @@ def test_mage_normal_attack() -> None:
     mage.attack(enemy)
 
     assert mage.mana == 10  # Fill in expected mana
-    assert 90 <= enemy.hp <= 99         # Check that enemy lost HP
+    assert 90 <= enemy.hp <= 99  # Check that enemy lost HP
 
 def test_mage_mana_max() -> None:
     """Test that mana regeneration does not exceed mana_max."""
