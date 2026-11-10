@@ -14,7 +14,7 @@ def test_warrior_initialization() -> None:
 def test_warrior_armor() -> None:
     """Test that armor protects against damage."""
 
-    warrior = Warrior("Aragorn", armor=5)
+    warrior = Warrior("Gimli", armor=5)
 
     warrior.take_damage(4)
 
