@@ -1,5 +1,6 @@
 from game.character import Character, Mage
 
+
 def test_mage_initialization() -> None:
     """Test that a mage is initialized correctly."""
 
