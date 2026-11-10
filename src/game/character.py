@@ -84,11 +84,8 @@ class Warrior(Character):
 
         if damage <= 0:
             return
-
-        if damage == 1:
-            rolled_damage = 1
-        else:
-            rolled_damage = Dice(damage).roll()
+        
+        rolled_damage = 1 if damage == 1 else Dice(damage).roll()
 
         reduced_damage = max(rolled_damage - self.armor, 0)
         self._hp = max(self._hp - reduced_damage, 0)
