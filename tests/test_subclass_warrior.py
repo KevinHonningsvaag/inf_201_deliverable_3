@@ -11,6 +11,7 @@ def test_warrior_initialization() -> None:
     assert warrior.armor == 5
     assert warrior.is_alive
 
+
 def test_warrior_armor() -> None:
     """Test that armor protects against damage."""
 

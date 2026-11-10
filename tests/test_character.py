@@ -58,4 +58,3 @@ def test_character_dies():
 
     assert character.hp == 0
     assert character.is_alive is False
-

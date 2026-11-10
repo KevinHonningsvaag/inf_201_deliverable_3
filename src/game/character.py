@@ -70,24 +70,15 @@ class Character:
         return self._hp > 0
 
 
-class Warrior(Character): 
+class Warrior(Character):
     """Represents a warrior character."""
 
     def __init__(
-        self,
-        name: str,
-        weapon: Weapons | None = None,
-        hp_max: int = 150,
-        base_damage: int = 10,
-        armor: int = 5
+        self, name: str, weapon: Weapons | None = None, hp_max: int = 150, base_damage: int = 10, armor: int = 5
     ) -> None:
-        super().__init__(
-            name=name,
-            weapon=weapon,
-            hp_max=hp_max,
-            base_damage=base_damage
-        )
+        super().__init__(name=name, weapon=weapon, hp_max=hp_max, base_damage=base_damage)
         self.armor = armor
+
     def take_damage(self, damage: int) -> None:
         """Reduce incoming damage by armor."""
 
@@ -102,6 +93,7 @@ class Warrior(Character):
         reduced_damage = max(rolled_damage - self.armor, 0)
         self._hp = max(self._hp - reduced_damage, 0)
 
+
 class Mage(Character):
     """Represents a mage character."""
 
@@ -109,7 +101,7 @@ class Mage(Character):
         self,
         name: str,
         weapon: Weapons | None = None,
-        hp_max: int = 100,        
+        hp_max: int = 100,
         base_damage: int = 10,
         mana: int = 30,
         mana_max: int = 30,
@@ -124,8 +116,7 @@ class Mage(Character):
         if self.mana >= 10:
             self.mana -= 10
             target.take_damage(self.base_damage * 2)  # Mana attack deals double damage
-            
+
         else:
             super().attack(target)
-            self.mana = min(self.mana + 5, self.mana_max) # Regenerates mana when using base attack
-            
+            self.mana = min(self.mana + 5, self.mana_max)  # Regenerates mana when using base attack
