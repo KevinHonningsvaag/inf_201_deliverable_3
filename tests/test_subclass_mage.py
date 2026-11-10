@@ -11,6 +11,7 @@ def test_mage_initialization() -> None:
     assert mage.mana == 30
     assert mage.is_alive
 
+
 def test_mage_magic_attack() -> None:
     """Test that magical attacks consume mana and damage the enemy."""
 
@@ -21,6 +22,7 @@ def test_mage_magic_attack() -> None:
 
     assert mage.mana == 20
     assert 80 <= enemy.hp <= 99
+
 
 def test_mage_normal_attack() -> None:
     """Test that Mage uses a normal attack when mana is low."""
@@ -33,6 +35,7 @@ def test_mage_normal_attack() -> None:
     assert mage.mana == 10  # Fill in expected mana
     assert 90 <= enemy.hp <= 99  # Check that enemy lost HP
 
+
 def test_mage_mana_max() -> None:
     """Test that mana regeneration does not exceed mana_max."""
     mage = Mage("Harry", mana=8, mana_max=10)
@@ -42,4 +45,3 @@ def test_mage_mana_max() -> None:
 
     assert mage.mana == 10
     assert mage.mana <= mage.mana_max
-    
