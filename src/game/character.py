@@ -88,8 +88,7 @@ class Warrior(Character):
             base_damage=base_damage
         )
         self.armor = armor
-        
-     def take_damage(self, damage: int) -> None:
+    def take_damage(self, damage: int) -> None:
         """Reduce incoming damage by armor."""
 
         if damage <= 0:
