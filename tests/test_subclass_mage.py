@@ -1,5 +1,5 @@
 from game.character import Mage
-from game.character import Warrior
+from game.character import Character
 
 def test_mage_initialization() -> None:
     """Test that a mage is initialized correctly."""
@@ -15,7 +15,7 @@ def test_mage_magic_attack() -> None:
     """Test that magical attacks consume mana and damage the enemy."""
 
     mage = Mage("Harry")
-    enemy = Warrior("Orc")
+    enemy = Character("Orc")
 
     mage.attack(enemy)
 
@@ -26,7 +26,7 @@ def test_mage_normal_attack() -> None:
     """Test that Mage uses a normal attack when mana is low."""
 
     mage = Mage("Harry", mana=5)
-    enemy = Warrior("Orc")
+    enemy = Character("Orc")
 
     mage.attack(enemy)
 
