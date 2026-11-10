@@ -88,16 +88,17 @@ class Warrior(Character):
             base_damage=base_damage
         )
         self.armor = armor
-
-   def take_damage(self, damage: int) -> None:
+        
+     def take_damage(self, damage: int) -> None:
         """Reduce incoming damage by armor."""
 
-            if damage <= 0:
-                return
-            if damage == 1:
-                rolled_damage = 1
-            else: 
-                rolled_damage = Dice(damage).roll()
+        if damage <= 0:
+            return
+
+        if damage == 1:
+            rolled_damage = 1
+        else:
+            rolled_damage = Dice(damage).roll()
 
         reduced_damage = max(rolled_damage - self.armor, 0)
         self._hp = max(self._hp - reduced_damage, 0)
