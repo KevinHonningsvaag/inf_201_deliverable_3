@@ -14,7 +14,7 @@ class Battle:
         self.hero = hero
         self.enemy = enemy
     
-    def play_round(self)->None:
+    def play_round(self) -> None:
         """simulates one round of battle between hero and enemy"""
 
         if self.hero.is_alive and self.enemy.is_alive:
