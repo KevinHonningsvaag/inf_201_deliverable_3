@@ -37,22 +37,22 @@ class Battle:
                 print(f"{self.hero.name} has {self.hero.hp} HP remaining.")
 
     def simulate_battle(self) -> None:
-    """Simulate a battle until one character dies."""
+        """Simulate a battle until one character dies."""
 
-    round_number = 1
+        round_number = 1
 
-    print(f"\nBattle: {self.hero.name} vs {self.enemy.name}")
+        print(f"\nBattle: {self.hero.name} vs {self.enemy.name}")
 
-    while self.hero.is_alive and self.enemy.is_alive:
-        print(f"\n========== Round {round_number} ==========")
+        while self.hero.is_alive and self.enemy.is_alive:
+            print(f"\n========== Round {round_number} ==========")
 
-        self.play_round()
-        round_number += 1
+            self.play_round()
+            round_number += 1
 
-    if self.hero.is_alive:
-        print(f"\n{self.hero.name} wins the battle!")
-    elif self.enemy.is_alive:
-        print(f"\n{self.enemy.name} wins the battle!")
-    else:
-        print("\nNo winner!")
+        if self.hero.is_alive:
+            print(f"\n{self.hero.name} wins the battle!")
+        elif self.enemy.is_alive:
+            print(f"\n{self.enemy.name} wins the battle!")
+        else:
+            print("\nNo winner!")
 
