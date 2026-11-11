@@ -1,5 +1,5 @@
 from game.battle import Battle
-from game.character import Mage, Warrior
+from game.character import Character, Mage, Warrior
 
 
 def test_enemy_does_not_attack_when_defeated() -> None:
