@@ -12,6 +12,7 @@ def test_warrior_vs_mage() -> None:
 
     assert not (hero.is_alive and enemy.is_alive)
 
+
 def test_battle_initialization() -> None:
     """Test that a battle stores both characters."""
     hero = Character("Isildur")
@@ -21,6 +22,7 @@ def test_battle_initialization() -> None:
 
     assert battle.hero is hero
     assert battle.enemy is enemy
+
 
 def test_enemy_does_not_attack_when_defeated() -> None:
     """Test that a defeated enemy cannot attack back."""
@@ -33,6 +35,7 @@ def test_enemy_does_not_attack_when_defeated() -> None:
 
     assert enemy.hp == 0
     assert hero.hp == 100
+
 
 def test_battle_ends() -> None:
     """Test that the battle ends when one character dies."""
