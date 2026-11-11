@@ -8,8 +8,8 @@ class Battle:
         """
         choose two characters to battle each other
         """
-        self.hero = hero
-        self.enemy = enemy
+        self.hero: Character = hero
+        self.enemy: Character = enemy
 
     def play_round(self) -> None:
         """simulates one round of battle between hero and enemy"""
@@ -34,19 +34,22 @@ class Battle:
                 print(f"{self.hero.name} has {self.hero.hp} HP remaining.")
 
     def simulate_battle(self) -> None:
-        """Simulate a battle until one character dies."""
+        """Simulate a battle until one character dies. Or turn limit (100 turns) is reached"""
 
         round_number = 1
 
         print(f"\nBattle: {self.hero.name} vs {self.enemy.name}")
 
-        while self.hero.is_alive and self.enemy.is_alive:
+        while self.hero.is_alive and self.enemy.is_alive and round_number <= 100:
             print(f"\n========== Round {round_number} ==========")
 
             self.play_round()
             round_number += 1
 
-        if self.hero.is_alive:
+        if self.hero.is_alive and self.enemy.is_alive:
+            # If someone puts to much armor on hero and enemy the battle would never end
+            print(f"\nDraw between {self.hero.name} and {self.enemy.name}: turn limit reached")
+        elif self.hero.is_alive:
             print(f"\n{self.hero.name} wins the battle!")
         elif self.enemy.is_alive:
             print(f"\n{self.enemy.name} wins the battle!")

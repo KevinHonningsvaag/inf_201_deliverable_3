@@ -1,16 +1,17 @@
 [project]
 name = "inf_201_deliverable_3"
 version = "0.1.0"
-description = "Add your description here"
+description = "Simple battle simulator"
 readme = "README.md"
 authors = [
-    { name = "Kevin", email = "kevhonn02@gmail.com" }
+    { name = "Kevin", email = "kevhonn02@gmail.com" },
+    { name = "Herman Nordstrand", email = "?" }
 ]
 requires-python = ">=3.13"
 dependencies = []
 
 [project.scripts]
-project = "game:main"
+project = "game.run:main"
 
 [build-system]
 requires = ["uv_build>=0.13.6,<0.14.0"]
