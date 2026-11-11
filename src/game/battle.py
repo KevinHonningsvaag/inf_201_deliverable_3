@@ -30,9 +30,7 @@ class Battle:
                 self.enemy.attack(self.hero)
                 damage_dealt = hero_hp_before - self.hero.hp
 
-                print(
-                    f"{self.enemy.name} deals {damage_dealt} damage to {self.hero.name}!"
-                )
+                print(f"{self.enemy.name} deals {damage_dealt} damage to {self.hero.name}!")
                 print(f"{self.hero.name} has {self.hero.hp} HP remaining.")
 
     def simulate_battle(self) -> None:
@@ -50,9 +48,7 @@ class Battle:
 
         if self.hero.is_alive and self.enemy.is_alive:
             # If someone puts to much armor on hero and enemy the battle would never end
-            print(
-                f"\nDraw between {self.hero.name} and {self.enemy.name}: turn limit reached"
-            )
+            print(f"\nDraw between {self.hero.name} and {self.enemy.name}: turn limit reached")
         elif self.hero.is_alive:
             print(f"\n{self.hero.name} wins the battle!")
         elif self.enemy.is_alive:
