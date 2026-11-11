@@ -1,19 +1,16 @@
 from game.character import Character
 
+
 class Battle:
     """Represents a battle between two characters"""
 
-    def __init__(
-        self,
-        hero: Character,
-        enemy: Character
-    ) -> None:
+    def __init__(self, hero: Character, enemy: Character) -> None:
         """
         choose two characters to battle each other
         """
         self.hero = hero
         self.enemy = enemy
-    
+
     def play_round(self) -> None:
         """simulates one round of battle between hero and enemy"""
 
@@ -55,4 +52,3 @@ class Battle:
             print(f"\n{self.enemy.name} wins the battle!")
         else:
             print("\nNo winner!")
-
