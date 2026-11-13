@@ -1,0 +1,94 @@
+*   a48ceef - Herman Nordstrand, 14 hours ago : Merge pull request #27 from KevinHonningsvaag/24/feature/jupyter_notebook
+|\  
+| * cfe84b3 - Herman Nordstrand, 14 hours ago : fixed some methods
+| * d419b11 - Herman Nordstrand, 14 hours ago : hopefully fixed the linting issue
+| * 06b2a70 - Herman Nordstrand, 15 hours ago : removed double class definition hopefully
+| * bb7f953 - Herman Nordstrand, 15 hours ago : Changed hp to 100 for warrior, and added a final sentence
+| * 8bb6344 - Herman Nordstrand, 15 hours ago : removed some empty markdown cells
+| * ae68ed7 - Herman Nordstrand, 15 hours ago : Finished up some editing
+| * 4db6658 - Herman Nordstrand, 18 hours ago : created a notebook and added most of the innhold
+| * 9e9c5ea - Herman Nordstrand, 25 hours ago : created notebook file for deliverable 3
+* |   fb7c77e - KevinHonningsvaag, 2 days ago : Merge pull request #26 from KevinHonningsvaag/25/feature/make_run.py
+|\ \  
+| |/  
+|/|   
+| * bfd676c - Kevin, 2 days ago : format
+| * 50d5b98 - Kevin, 2 days ago : final touch
+|/  
+*   36956a5 - Herman Nordstrand, 2 days ago : Merge pull request #23 from KevinHonningsvaag/21/fix/test_battle
+|\  
+| * d64a35e - Herman Nordstrand, 2 days ago : ruff formatting
+| * 3de1ca1 - Herman Nordstrand, 2 days ago : Added more relevant tests
+| * 0a4d9ae - Herman Nordstrand, 2 days ago : added charcter
+| * a94a2bd - Herman Nordstrand, 2 days ago : changed the test to actually test and not just run a battle
+| * a8073d6 - Herman Nordstrand, 2 days ago : created a test file for battles
+|/  
+*   743b8a9 - Herman Nordstrand, 2 days ago : Merge pull request #22 from KevinHonningsvaag/20/feature/create_battle_class
+|\  
+| * 78abee8 - Herman Nordstrand, 2 days ago : fixed some formatting issues
+| * 53c08ab - Herman Nordstrand, 2 days ago : forgot some spaces in the play round function
+| * 049f6ce - Herman Nordstrand, 2 days ago : fixed indentations errors
+| * 14a2b0c - Herman Nordstrand, 2 days ago : created the battle class to handle battles it also should print every round
+|/  
+*   c65bbd1 - Herman Nordstrand, 3 days ago : Merge pull request #18 from KevinHonningsvaag/15/feature/Create_subclass_mage
+|\  
+| * 55329ba - Herman Nordstrand, 3 days ago : fixed some more with ruff
+| * 7502db1 - Herman Nordstrand, 3 days ago : fixed with ruff
+| * 090ec27 - Herman Nordstrand, 3 days ago : Overwrote some saving issues
+| * b75d294 - Herman Nordstrand, 3 days ago : fixed last with ruff
+| * ab5d171 - Herman Nordstrand, 3 days ago : now i changed and added a max mana test
+| * 69df50f - Herman Nordstrand, 3 days ago : fixed the last assert as ... always true
+| * 01c2c83 - Herman Nordstrand, 3 days ago : changed back to character as it is easier to configure the mana attack
+| * 2120738 - Herman Nordstrand, 3 days ago : changed class of enemy to Warrior to see if that worked
+| * d853672 - Herman Nordstrand, 3 days ago : Created a testfile
+| * 430df7a - Herman Nordstrand, 3 days ago : Merge pull request #17 from KevinHonningsvaag/16/feature/Create_subclass_warrior
+|/| 
+| * ac6f324 - Herman Nordstrand, 3 days ago : Finally fixed ruff check issues
+| * 7f9c7e6 - Herman Nordstrand, 3 days ago : trying and failing
+| * 25aa8fe - Herman Nordstrand, 3 days ago : ran ruff format
+| * 4fe3276 - Herman Nordstrand, 3 days ago : fixed a name, but it worked either way think the test is fine but needed to be consistent
+| * 1eed16f - Herman Nordstrand, 3 days ago : Now i fixed the warrior class
+| * ac37bcd - Herman Nordstrand, 3 days ago : fixed some indentations
+| * c6f6686 - Herman Nordstrand, 3 days ago : created a subclass called warrior and created a file to test the subclass warrior
+|/  
+*   a917fe8 - KevinHonningsvaag, 7 days ago : Merge pull request #13 from KevinHonningsvaag/12/feature/items.py
+|\  
+| * d73716a - Kevin, 7 days ago : format
+| * 67047e4 - Kevin, 7 days ago : big push
+|/  
+*   ee7e3c1 - KevinHonningsvaag, 10 days ago : Merge pull request #11 from KevinHonningsvaag/8/feature/dice_class
+|\  
+| * 27eb45f - Kevin, 10 days ago : dice class made
+|/  
+*   6df801f - KevinHonningsvaag, 10 days ago : Merge pull request #10 from KevinHonningsvaag/9/fix/basedpyright_warning
+|\  
+| * e96c7af - Kevin, 10 days ago : fixed type def attack
+|/  
+* 2d9926d - Kevin, 10 days ago : set basedpyrigt to strict
+*   dac4128 - KevinHonningsvaag, 11 days ago : Merge pull request #7 from KevinHonningsvaag/6/feature/is_alive
+|\  
+| * 0d47344 - Kevin, 11 days ago : fixed typing error
+| * 061dab1 - Kevin, 11 days ago : finds out if the character is alive
+| * 3774d7b - Kevin, 11 days ago : fuction checks if character is alive
+|/  
+*   06286a3 - KevinHonningsvaag, 11 days ago : Merge pull request #5 from KevinHonningsvaag/4/feature/heal_function
+|\  
+| * b23a119 - Kevin, 11 days ago : heal function and some tests added
+|/  
+*   62c94b1 - KevinHonningsvaag, 11 days ago : Merge pull request #3 from KevinHonningsvaag/2/feature/take_damage
+|\  
+| * 4242dd3 - Kevin, 11 days ago : take_damage function
+|/  
+* b8ce18a - Kevin, 11 days ago : readme update
+* 9481a68 - Kevin, 11 days ago : vs code config
+* fae6309 - Kevin, 11 days ago : rename test
+* 4751904 - Kevin, 11 days ago : fix
+* 47a7b62 - Kevin, 11 days ago : uv version
+* cfbeb0d - Kevin, 11 days ago : base
+* 4a1f6a8 - Kevin, 11 days ago : base
+* d3d29fe - Kevin, 11 days ago : base
+* 73c9176 - Kevin, 11 days ago : base
+* ef41fd8 - Kevin, 11 days ago : base
+* 1cb08a6 - Kevin, 11 days ago : base
+* 26fc8c3 - Kevin, 11 days ago : base
+* 0635bb9 - KevinHonningsvaag, 11 days ago : Initial commit
